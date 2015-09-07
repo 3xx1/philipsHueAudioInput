@@ -27,6 +27,13 @@ class ofApp : public ofBaseApp
         void audioReceived (float *input, int bufferSize, int nChannels);
         ofxPhilipsHue hue;
     
+        bool shortTermEvent_amp;
+        bool longTermEvent_amp;
+        int recognition_index;
+        int recognition_index_previous;
+        int recognition_sustain;
+        int temporary_index_buffer;
+    
     private:
         float *left;
         float *right;
